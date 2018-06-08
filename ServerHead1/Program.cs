@@ -11,7 +11,9 @@ namespace ServerHead1
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Head office 1");
+            var title = "Head office 1";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "ServerHead1Queue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);

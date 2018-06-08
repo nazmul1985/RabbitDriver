@@ -12,7 +12,9 @@ namespace DeviceB2
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Barisal Device 2");
+            var title = "Barisal Device 2";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "BarisalDevice2Queue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);

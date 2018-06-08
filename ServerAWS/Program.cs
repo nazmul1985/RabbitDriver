@@ -18,7 +18,9 @@ namespace ServerAWS
 
             //TestTransaction();
             //return;
-            Console.WriteLine("AWS server");
+            var title = "AWS server";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "ServerAWSQueue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);

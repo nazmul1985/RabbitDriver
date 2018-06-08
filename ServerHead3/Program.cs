@@ -11,7 +11,9 @@ namespace ServerHead3
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Head office 3");
+            var title = "Head office 3";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "ServerHead3Queue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);

@@ -11,7 +11,9 @@ namespace ServerKhulna
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Khulna office");
+            var title = "Khulna office";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "ServerKhulnaQueue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic,

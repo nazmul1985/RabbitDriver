@@ -11,7 +11,9 @@ namespace ServerBarisal
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Barisal office");
+            var title = "Barisal office";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "ServerBarisalQueue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);

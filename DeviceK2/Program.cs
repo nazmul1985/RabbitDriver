@@ -13,7 +13,9 @@ namespace DeviceK2
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Khulna Device 2");
+            var title = "Khulna Device 2";
+            Console.Title = title;
+            Console.WriteLine(title);
             var receiver = new MessageReceiver();
             var queueName = "KhulnaDevice2Queue";
             receiver.CreateReceiver(queueName, ProcessResponse, ExchangeType.Topic, ExchangeNames.TopicExchange, RoutingKey);
